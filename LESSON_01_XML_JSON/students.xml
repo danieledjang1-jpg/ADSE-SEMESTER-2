@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<student>
+    <FirstName>Daniel</FirstName>
+    <LastName>Edjang</LastName>
+    <Age>22</Age>
+    <Course>Software Engineering</Course>
+</student>
+

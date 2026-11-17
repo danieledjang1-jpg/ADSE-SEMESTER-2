@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<student xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="advanced-student.xsd"
+    id="ST001">
+
+    <FirstName>Daniel</FirstName>
+    <LastName>Edjang</LastName>
+    <Age>22</Age>
+    <Department>Software Engineering</Department>
+
+</student>
+
+
+
+<!-- <?xml version="1.0" encoding="UTF-8"?>
+
+<student
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="dtech-student.xsd"
+    id="ST001">
+
+    <FirstName>Daniel</FirstName>
+    <LastName>Edjnag</LastName>
+    <Age>20</Age>
+    <Phone>08117012465</Phone>
+    <Skill>HTML</Skill>
+    <Skill>CSS</Skill>
+    <Skill>JavaScript</Skill>
+
+</student> -->
+
+<!-- <xs:element name="FirstName"
+            type="xs:string"/>
+
+<xs:element name="LastName"
+            type="xs:string"/>
+
+<xs:element name="Age"
+            type="xs:integer"/>
+
+
+<xs:element name="Phone"
+            type="xs:string"
+            minOccurs="0" 
+            maxOccurs="2" />
+
+<xs:element name="Skill"
+            type="xs:string"
+            minOccurs="2"
+            maxOccurs="5"/>
+
+<xs:element name="Certificate"
+            type="xs:string"
+            minOccurs="0"
+            maxOccurs="unbounded"/> -->
+
+
+
+<!-- <xs:element name="Age">
+    <xs:simpleType>
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="16"/>
+            <xs:maxInclusive value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element> -->
+
+
+
+
+<!-- <xs:element name="Level">
+    <xs:simpleType>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Beginner"/>
+            <xs:enumeration value="Intermediate"/>
+            <xs:enumeration value="Advanced"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element> -->

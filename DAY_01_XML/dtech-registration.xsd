@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="student">
+
+        <xs:complexType>
+
+            <xs:sequence>
+
+                <!-- Student Name -->
+                <xs:element name="Name">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:minLength value="3" />
+                            <xs:maxLength value="30" />
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+
+                <!-- Student Age -->
+                <xs:element name="Age">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:integer">
+                            <xs:minInclusive value="16" />
+                            <xs:maxInclusive value="100" />
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+
+                <!-- Student ID -->
+                <xs:element name="StudentID">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:length value="6" />
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+
+                <!-- Training Level -->
+                <xs:element name="Level">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="Beginner" />
+                            <xs:enumeration value="Intermediate" />
+                            <xs:enumeration value="Advanced" />
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+
+                <!-- Phone Numbers -->
+                <xs:element name="Phone"
+                    type="xs:string"
+                    minOccurs="0"
+                    maxOccurs="2" />
+
+                <!-- Student Skills -->
+                <xs:element name="Skill"
+                    type="xs:string"
+                    minOccurs="2"
+                    maxOccurs="5" />
+
+                <!-- Certificates -->
+                <xs:element name="Certificate"
+                    type="xs:string"
+                    minOccurs="0"
+                    maxOccurs="unbounded" />
+
+            </xs:sequence>
+
+            <!-- Required Student Attribute -->
+            <xs:attribute name="id"
+                type="xs:string"
+                use="required" />
+
+        </xs:complexType>
+
+    </xs:element>
+
+</xs:schema>

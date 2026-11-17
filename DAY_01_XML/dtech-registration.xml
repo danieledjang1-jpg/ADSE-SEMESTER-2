@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<student
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="dtech-registration.xsd"
+    id="ST001">
+
+    <Name>Daniel Edjang</Name>
+
+    <Age>22</Age>
+
+    <StudentID>DT0001</StudentID>
+
+    <Level>Advanced</Level>
+
+    <Phone>08117012465</Phone>
+
+    <Phone>08052871050</Phone>
+
+    <Skill>HTML</Skill>
+
+    <Skill>CSS</Skill>
+
+    <Skill>JavaScript</Skill>
+
+    <Certificate>Web Development</Certificate>
+
+    <Certificate>Database Fundamentals</Certificate>
+
+</student>

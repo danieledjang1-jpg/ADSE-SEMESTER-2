@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE student [
+    <!ELEMENT student (FirstName, LastName, Age, Department)>
+    <!ELEMENT FirstName (#PCDATA)>
+    <!ELEMENT LastName (#PCDATA)>
+    <!ELEMENT Age (#PCDATA)>
+    <!ELEMENT Department (#PCDATA)>
+]>
+
+<student>
+    <FirstName>Daniel</FirstName>
+    <LastName>Edjang</LastName>
+    <Age>22</Age>
+    <Department>Software Engineering</Department>
+</student>

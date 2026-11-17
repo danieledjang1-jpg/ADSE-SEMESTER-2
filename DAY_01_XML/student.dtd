@@ -1,0 +1,6 @@
+<!ELEMENT student (FirstName, LastName, Age, Department)>
+
+<!ELEMENT FirstName (#PCDATA)>
+<!ELEMENT LastName (#PCDATA)>
+<!ELEMENT Age (#PCDATA)>
+<!ELEMENT Department (#PCDATA)>

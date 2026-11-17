@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE student SYSTEM "student.dtd">
+
+<student>
+
+    <FirstName>Daniel</FirstName>
+    <LastName>Edjang</LastName>
+    <Age>22</Age>
+    <Department>Software Engineering</Department>
+</student>

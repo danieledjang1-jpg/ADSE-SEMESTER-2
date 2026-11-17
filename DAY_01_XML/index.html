@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Dtech Student Management System</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="brand">
+        <div class="logo">D</div>
+
+        <div>
+          <h1>Dtech</h1>
+          <p>Student Management System</p>
+        </div>
+      </div>
+
+      <div class="header-status">
+        <span class="status-dot"></span>
+        XML DATA SYSTEM
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="welcome-section">
+        <div>
+          <p class="small-heading">STUDENT MANAGEMENT</p>
+
+          <h2>Student Dashboard</h2>
+
+          <p class="description">
+            Manage and view student information stored in XML.
+          </p>
+        </div>
+
+        <button id="loadButton" class="load-button">Load Student Data</button>
+      </section>
+
+      <div id="message" class="message">
+        Click "Load Student Data" to display your XML information.
+      </div>
+
+      <section id="studentSection" class="student-section hidden">
+        <div class="section-title">
+          <h3>Student Information</h3>
+
+          <span class="record-label">STUDENT RECORD</span>
+        </div>
+
+        <div class="student-card">
+          <div class="student-card-header">
+            <div class="avatar" id="avatar">D</div>
+
+            <div class="student-heading">
+              <h2 id="studentName">Student Name</h2>
+
+              <p id="studentId">Student ID</p>
+            </div>
+
+            <span class="level-badge" id="studentLevel"> Level </span>
+          </div>
+
+          <div class="details-grid">
+            <div class="detail-box">
+              <span class="detail-label">AGE</span>
+              <h3 id="studentAge">--</h3>
+            </div>
+
+            <div class="detail-box">
+              <span class="detail-label">STUDENT ID</span>
+              <h3 id="studentNumber">--</h3>
+            </div>
+
+            <div class="detail-box">
+              <span class="detail-label">TRAINING LEVEL</span>
+              <h3 id="studentTraining">--</h3>
+            </div>
+          </div>
+
+          <div class="information-section">
+            <h3>Contact Information</h3>
+
+            <div id="phoneList" class="item-list"></div>
+          </div>
+
+          <div class="information-section">
+            <h3>Technical Skills</h3>
+
+            <div id="skillList" class="tag-list"></div>
+          </div>
+
+          <div class="information-section">
+            <h3>Certificates</h3>
+
+            <div id="certificateList" class="tag-list"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="technology-section">
+        <h3>Technologies Used</h3>
+
+        <div class="technology-list">
+          <span>XML</span>
+          <span>XSD</span>
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 Dtech | Learn. Practise. Build. Become Skilled.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
