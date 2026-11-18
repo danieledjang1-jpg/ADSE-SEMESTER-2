@@ -33,7 +33,8 @@ const xmlBuilder = new XMLBuilder({
 app.use(cors({
     origin: [
         "http://127.0.0.1:5500",
-        "http://localhost:5500"
+        "http://localhost:5500",
+        "https://dtech-student-management-system.netlify.app"
     ]
 }));
 
