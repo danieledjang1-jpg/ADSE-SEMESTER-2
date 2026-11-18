@@ -1,0 +1,493 @@
+/* ==================================
+   DTECH STUDENT MANAGEMENT SYSTEM
+================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f3f6fa;
+  color: #263445;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background: #102b50;
+  color: white;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand {
+  margin-bottom: 60px;
+}
+
+.brand h1 {
+  font-size: 32px;
+  color: #ffffff;
+}
+
+.brand h1 span {
+  color: #28c76f;
+}
+
+.brand p {
+  font-size: 11px;
+  letter-spacing: 2px;
+  margin-top: 5px;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar nav a {
+  color: #dce8f5;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+  background: #1e497b;
+  color: white;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  font-size: 13px;
+  color: #dce8f5;
+  line-height: 2;
+}
+
+/* MAIN CONTENT */
+
+.main-content {
+  margin-left: 250px;
+  padding: 30px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.topbar h2 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.topbar p {
+  color: #7a8797;
+  font-size: 14px;
+}
+
+.admin-badge {
+  background: #e4f8ed;
+  color: #168a4c;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* WELCOME */
+
+.welcome {
+  background: linear-gradient(120deg, #123c70, #167c75);
+  color: white;
+  padding: 35px;
+  border-radius: 15px;
+  margin-bottom: 25px;
+}
+
+.welcome h1 {
+  margin-bottom: 12px;
+  font-size: 27px;
+}
+
+.welcome p {
+  color: #e4f5f3;
+}
+
+/* STATISTICS */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.04);
+}
+
+.stat-card p {
+  color: #7a8797;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.stat-card h2 {
+  font-size: 30px;
+  color: #174d82;
+}
+
+.stat-card small {
+  color: #168a4c;
+}
+
+/* PANELS */
+
+.panel {
+  background: white;
+  padding: 30px;
+  border-radius: 13px;
+  margin-bottom: 30px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.04);
+}
+
+.section-heading {
+  margin-bottom: 25px;
+}
+
+.section-heading h2 {
+  font-size: 21px;
+  margin-bottom: 8px;
+}
+
+.section-heading p {
+  font-size: 14px;
+  color: #8995a4;
+}
+
+/* FORM */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #dce2e9;
+  border-radius: 7px;
+  outline: none;
+  font-size: 14px;
+  background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #167c75;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 7px;
+  font-weight: bold;
+}
+
+.primary-button {
+  padding: 15px 25px;
+  background: #167c75;
+  color: white;
+}
+
+.primary-button:hover {
+  background: #105f59;
+}
+
+.secondary-button {
+  padding: 15px 25px;
+  background: #e9edf2;
+  color: #263445;
+}
+
+/* NOTIFICATIONS */
+
+.notice {
+  padding: 18px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  line-height: 1.7;
+}
+
+.notice.success {
+  background: #e2f8eb;
+  color: #126d3d;
+}
+
+.notice.error {
+  background: #ffe8e8;
+  color: #a52a2a;
+}
+
+.notice a {
+  display: inline-block;
+  margin-top: 10px;
+  margin-right: 15px;
+  font-weight: bold;
+  color: inherit;
+}
+
+/* SEARCH AND EXPORT */
+
+.table-controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+#searchInput {
+  flex: 1;
+  padding: 13px;
+  border: 1px solid #dce2e9;
+  border-radius: 7px;
+  outline: none;
+}
+
+.export-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.export-button {
+  text-decoration: none;
+  padding: 13px 16px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.json-button {
+  background: #e5f0ff;
+  color: #17549b;
+}
+
+.xml-button {
+  background: #e3f8ec;
+  color: #168a4c;
+}
+
+/* TABLE */
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 750px;
+}
+
+thead {
+  background: #f3f6fa;
+}
+
+th {
+  text-align: left;
+  padding: 15px;
+  font-size: 13px;
+}
+
+td {
+  padding: 16px 15px;
+  border-bottom: 1px solid #edf0f4;
+  font-size: 13px;
+}
+
+.empty-message {
+  text-align: center;
+  padding: 35px;
+  color: #8995a4;
+}
+
+/* ACTION BUTTONS */
+
+.action-buttons {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+
+.action-buttons button {
+  padding: 8px 10px;
+  font-size: 11px;
+}
+
+.view-button {
+  background: #e5f0ff;
+  color: #17549b;
+}
+
+.edit-button {
+  background: #fff3d9;
+  color: #9b6b00;
+}
+
+.delete-button {
+  background: #ffe8e8;
+  color: #a52a2a;
+}
+
+/* PROFILE DIALOG */
+
+dialog {
+  width: min(90%, 550px);
+  margin: auto;
+  padding: 25px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.close-button {
+  background: #ffe8e8;
+  color: #a52a2a;
+  width: 32px;
+  height: 32px;
+  font-size: 22px;
+}
+
+#studentDetails {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 2;
+  color: #334155;
+}
+
+.download-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.download-buttons a {
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 7px;
+  background: #e5f0ff;
+  color: #17549b;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #8995a4;
+  font-size: 12px;
+  line-height: 2;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .main-content {
+    margin-left: 200px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .brand {
+    margin-bottom: 20px;
+  }
+
+  .sidebar nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 15px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .table-controls {
+    flex-direction: column;
+  }
+
+  .topbar {
+    align-items: flex-start;
+    gap: 15px;
+    flex-direction: column;
+  }
+}

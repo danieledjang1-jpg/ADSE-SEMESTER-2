@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>DTECH Student Management System</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="app.js" defer></script>
+  </head>
+
+  <body>
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+      <div class="brand">
+        <h1>D<span>TECH</span></h1>
+
+        <p>STUDENT MANAGEMENT</p>
+      </div>
+
+      <nav>
+        <a href="#dashboard" class="active">Dashboard</a>
+
+        <a href="#registration">Register Student</a>
+
+        <a href="#students">Student Records</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <p>Powered by DTECH</p>
+
+        <small>Learn. Practise. Build.</small>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <h2>Student Management System</h2>
+
+          <p>Manage your student records efficiently.</p>
+        </div>
+
+        <div class="admin-badge">Administrator</div>
+      </header>
+
+      <!-- DASHBOARD -->
+
+      <section id="dashboard">
+        <div class="welcome">
+          <div>
+            <h1>Welcome to DTECH 👋</h1>
+
+            <p>Manage student registrations, records and information.</p>
+          </div>
+        </div>
+
+        <!-- STATISTICS -->
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <p>Total Students</p>
+
+            <h2 id="totalStudents">0</h2>
+          </div>
+
+          <div class="stat-card">
+            <p>Total Courses</p>
+
+            <h2 id="totalCourses">0</h2>
+          </div>
+
+          <div class="stat-card">
+            <p>Storage Formats</p>
+
+            <h2>2</h2>
+
+            <small>XML + JSON</small>
+          </div>
+        </div>
+      </section>
+
+      <!-- NOTIFICATION -->
+
+      <div id="notice" class="notice" hidden></div>
+
+      <!-- REGISTRATION FORM -->
+
+      <section class="panel" id="registration">
+        <div class="section-heading">
+          <div>
+            <h2 id="formTitle">Register New Student</h2>
+
+            <p>Enter the student's information below.</p>
+          </div>
+        </div>
+
+        <form id="studentForm">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                placeholder="Enter first name"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                placeholder="Enter last name"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="age">Age</label>
+
+              <input
+                type="number"
+                id="age"
+                name="age"
+                min="1"
+                max="120"
+                placeholder="Enter age"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter email address"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Enter phone number"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="course">Course</label>
+
+              <select id="course" name="course" required>
+                <option value="">Select course</option>
+
+                <option value="Software Engineering">
+                  Software Engineering
+                </option>
+
+                <option value="Web Development">Web Development</option>
+
+                <option value="Database Management">Database Management</option>
+
+                <option value="Computer Programming">
+                  Computer Programming
+                </option>
+
+                <option value="UI/UX Design">UI/UX Design</option>
+
+                <option value="Computer Skills">Computer Skills</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="city">City</label>
+
+              <input
+                type="text"
+                id="city"
+                name="city"
+                placeholder="Enter city"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-buttons">
+            <button type="submit" id="submitButton" class="primary-button">
+              Register Student
+            </button>
+
+            <button
+              type="button"
+              id="cancelEdit"
+              class="secondary-button"
+              hidden
+            >
+              Cancel Edit
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- STUDENT RECORDS -->
+
+      <section class="panel" id="students">
+        <div class="section-heading">
+          <div>
+            <h2>Student Records</h2>
+
+            <p>View and manage registered students.</p>
+          </div>
+        </div>
+
+        <div class="table-controls">
+          <input
+            type="search"
+            id="searchInput"
+            placeholder="Search by name, ID, email or course..."
+          />
+
+          <div class="export-buttons">
+            <a href="/api/export/json" class="export-button json-button">
+              Export JSON
+            </a>
+
+            <a href="/api/export/xml" class="export-button xml-button">
+              Export XML
+            </a>
+          </div>
+        </div>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Student ID</th>
+
+                <th>Student Name</th>
+
+                <th>Course</th>
+
+                <th>Email</th>
+
+                <th>City</th>
+
+                <th>Actions</th>
+              </tr>
+            </thead>
+
+            <tbody id="studentTable">
+              <tr>
+                <td colspan="6" class="empty-message">
+                  Loading student records...
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- STUDENT PROFILE DIALOG -->
+
+      <dialog id="studentDialog">
+        <div class="dialog-header">
+          <h2>Student Profile</h2>
+
+          <button id="closeDialog" class="close-button">×</button>
+        </div>
+
+        <pre id="studentDetails"></pre>
+
+        <div class="download-buttons" id="profileDownloads"></div>
+      </dialog>
+
+      <!-- FOOTER -->
+
+      <footer>
+        <p>© 2026 DTECH | Daniel Technology</p>
+
+        <p>Learn. Practise. Build. Become Skilled.</p>
+      </footer>
+    </main>
+  </body>
+</html>
