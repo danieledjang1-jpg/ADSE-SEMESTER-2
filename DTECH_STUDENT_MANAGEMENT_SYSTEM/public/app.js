@@ -3,7 +3,7 @@
 // FRONTEND JAVASCRIPT
 // ============================================
 
-const API_BASE_URL = "http://localhost:3000";
+const API_BASE_URL = "https://dtech-student-management-system.onrender.com";
 
 // Send frontend requests to the Node.js backend
 function apiFetch(endpoint, options = {}) {
