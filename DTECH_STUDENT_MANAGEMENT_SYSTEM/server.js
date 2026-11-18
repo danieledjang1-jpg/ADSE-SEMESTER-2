@@ -43,6 +43,8 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // ============================================
 // DATABASE INITIALIZATION
+
+fs.mkdirSync(path.dirname(JSON_FILE), { recursive: true });
 // ============================================
 
 if (!fs.existsSync(JSON_FILE)) {
