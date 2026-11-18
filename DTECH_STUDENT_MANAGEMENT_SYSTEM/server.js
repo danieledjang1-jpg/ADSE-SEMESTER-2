@@ -14,7 +14,7 @@ const cors = require("cors");
 const app = express();
 
 // Server configuration
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // File locations
 const JSON_FILE = path.join(__dirname, "data", "students.json");
